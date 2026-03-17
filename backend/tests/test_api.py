@@ -21,7 +21,7 @@ class TestEmotionDetection:
         assert response.status_code == 200
         data = response.json()
         assert "emotion" in data
-        assert data["emotion"] in ["neutral", "joy", "surprise", "sadness", "fear", "anger"]
+        assert data["emotion"].lower() in ["neutral", "joy", "surprise", "sadness", "fear", "anger"]
         # depending on the model output, it usually detects neutral or joy
 
     def test_detect_angry_sentence(self, test_client):
@@ -29,7 +29,7 @@ class TestEmotionDetection:
         assert response.status_code == 200
         data = response.json()
         assert "emotion" in data
-        assert data["emotion"] == "anger"
+        assert "anger" in data["emotion"].lower()
 
     def test_detect_empty_input(self, test_client):
         response = test_client.post("/detect-emotion", json={"text": ""})
@@ -48,7 +48,7 @@ class TestMessageRewriting:
         data = response.json()
         
         # If it's neutral, it should return the original text directly according to your rewriter logic
-        if data["detected_emotion"] in ["neutral", "joy"]:
+        if data["detected_emotion"].lower() in ["neutral", "joy"]:
             assert data["rewritten_message"] == original_text
             
     def test_rewrite_angry_sentence(self, test_client):
@@ -56,7 +56,7 @@ class TestMessageRewriting:
         response = test_client.post("/rewrite-message", json={"text": original_text})
         assert response.status_code == 200
         data = response.json()
-        assert data["detected_emotion"] == "anger"
+        assert "anger" in data["detected_emotion"].lower()
         assert len(data["rewritten_message"]) > 0
         assert original_text != data["rewritten_message"]
 

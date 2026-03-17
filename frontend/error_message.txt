@@ -1,0 +1,26 @@
+﻿  ΓùÅ Test suite failed to run
+
+    You appear to be using a native ECMAScript module configuration file, which is only supported when running Babel asynchronously or when using the Node.js `--experimental-require-module` flag.
+        at C:\Users\sai siddharth\OneDrive\Desktop\Emotion2\Emotion\frontend\babel.config.js
+
+      at loadPartialConfigSync (node_modules/@babel/core/src/config/index.ts:53:60)
+      at loadPartialConfigSync (node_modules/@babel/core/src/config/index.ts:72:14)
+      at ScriptTransformer._getCacheKey (node_modules/@jest/transform/build/ScriptTransformer.js:228:41)
+      at ScriptTransformer._getFileCachePath (node_modules/@jest/transform/build/ScriptTransformer.js:289:27)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:525:32)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+
+  ΓùÅ Test suite failed to run
+
+    You appear to be using a native ECMAScript module configuration file, which is only supported when running Babel asynchronously or when using the Node.js `--experimental-require-module` flag.
+        at C:\Users\sai siddharth\OneDrive\Desktop\Emotion2\Emotion\frontend\babel.config.js
+
+      at loadPartialConfigSync (node_modules/@babel/core/src/config/index.ts:53:60)
+      at loadPartialConfigSync (node_modules/@babel/core/src/config/index.ts:72:14)
+      at ScriptTransformer._getCacheKey (node_modules/@jest/transform/build/ScriptTransformer.js:228:41)
+      at ScriptTransformer._getFileCachePath (node_modules/@jest/transform/build/ScriptTransformer.js:289:27)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:525:32)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+
